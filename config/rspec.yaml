@@ -1,0 +1,9 @@
+TEST_ENV:
+  office365: 
+    host: 'https://portal.microsoftonline.com'
+    username: 'office@firstecloud.onmicrosoft.com'
+    password: 'FirsteCloud123'
+  cloudfinder: 
+    host: 'https://app.cloudfinder.com'
+    username: 'emir.tabakovic@outlook.com'
+    password: 'FirsteCloud123'

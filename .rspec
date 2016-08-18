@@ -1,0 +1,6 @@
+--require ./lib/init_rspec
+--color
+--format documentation
+#--format progress
+
+#--options TEST_ENV
