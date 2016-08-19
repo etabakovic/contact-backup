@@ -12,6 +12,14 @@ class Cloudfinder < Homepage
     @browser.div(class_name:'login').button(value:'Login')
   end
 
+  def user(email)
+    @browser.link(text:/#{email}/)
+  end
+
+  def logout
+    @browser.link(text:'Logout')
+  end
+
   def search_header
     @browser.text_field(placeholder:'Search here...')
   end
@@ -41,7 +49,6 @@ class Cloudfinder < Homepage
   end
 
   def view_file
-    #actions.moveToElement(@browser.div(class:'view-permission').button)
     @browser.div(class:'view-permission').button(value: 'View file')
   end
 
@@ -140,7 +147,11 @@ class Cloudfinder < Homepage
     @browser.div(class:'modal-footer').button(text:'Close')
   end
 
-  def status_check(row)
+  def backup_status_check(row)
+    @browser.span(:xpath,"//table/tbody/tr[#{row}]/td[3]//span")
+  end
+
+  def restore_status_check(row)
     @browser.span(:xpath,"//table/tbody/tr[#{row}]/td[6]//span")
   end
 end

@@ -25,7 +25,7 @@ RSpec.configure do |config|
   # global BEFORE :ALL hook (initialize browser)
   # ******************************************************************
   config.before(:all) do
-    @homepage = initialize_browser($config["cloudfinder"]["host"])
+    @homepage = initialize_browser
   end
 
   # ********************************************************
@@ -55,12 +55,10 @@ end
 # *****************************************************************************
 # initialize the browser, used by BEFORE :ALL hook
 # *****************************************************************************
-def initialize_browser(full_host)
+def initialize_browser
   puts "\n>Initializing Firefox browser"
   @browser = Watir::Browser.new :firefox
+  @browser.send_keys :f11
   @homepage = Homepage.new(@browser)
-  #puts "\n>Navigating to home page: " + full_host
-  #@homepage.goto_home(full_host) # navigate to home page
-  #puts "\n>Opened page: " + @homepage.get_browser.title
   return @homepage
 end

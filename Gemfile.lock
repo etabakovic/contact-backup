@@ -35,12 +35,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  require_all
-  rspec
-  selenium-webdriver
-  titleize
-  watir-scroll
-  watir-webdriver
+  require_all (= 1.3.3)
+  rspec (= 3.5.0)
+  selenium-webdriver (= 2.53.4)
+  titleize (= 1.4.0)
+  watir-scroll (= 0.1.0)
+  watir-webdriver (= 0.9.3)
 
 BUNDLED WITH
    1.12.5
