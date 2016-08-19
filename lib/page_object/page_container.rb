@@ -19,10 +19,10 @@ class PageContainer
   
   def wait_status(element,status)
     i = 1
-    count = 5
+    count = 30
     interval = 10
 
-    while !(element.text.start_with?(status) or element.text.start_with?("Failed") or i>count)
+    while !(element.text.start_with?(status) or i>count)
       sleep interval
       i = i+1
       @browser.refresh

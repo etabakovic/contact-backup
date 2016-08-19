@@ -1,5 +1,5 @@
 TEST_ENV:
-  office365: 
+  office: 
     host: 'https://portal.microsoftonline.com'
     username: 'office@firstecloud.onmicrosoft.com'
     password: 'FirsteCloud123'

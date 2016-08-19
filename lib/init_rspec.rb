@@ -7,6 +7,7 @@ require 'watir-scroll'
 require 'watir-webdriver'
 require 'selenium-webdriver'
 require 'require_all'
+require 'titleize'
 
 #Load all page objects using the require_all gem. This loads all sub-directories, too
 require_all './lib/'

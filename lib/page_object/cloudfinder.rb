@@ -24,6 +24,10 @@ class Cloudfinder < Homepage
     @browser.strong(:xpath, "//div[@class='scrollme-list ng-scope']//table//tr[td[3]/strong='#{name}']/td[3]/strong")
   end
 
+  # def contact_name1(email)
+  #   @browser.tr(:xpath, "//table//tr[td/small/span[contains(text(),'#{email}')]]")
+  # end
+
   def contact_checkbox(name)
     @browser.checkbox(:xpath,"//div[@class='scrollme-list ng-scope']//table//tr[td[3]/strong='#{name}']/td[1]/input")
   end
@@ -38,8 +42,6 @@ class Cloudfinder < Homepage
   end
 
   def backup_list
-    #@browser.div(class_name: 'side-list').ul(class: 'search-details-header nav nav-pills ng-scope').li(class: 'dropdown pull-right').button
-    #@browser.element(class: 'side-list ng-scope').li(class: 'dropdown pull-right').button
     @browser.button(class:'dropdown-toggle btn btn-default btn-xs ng-binding')
   end
 
@@ -55,9 +57,16 @@ class Cloudfinder < Homepage
     @browser.link(text:name)
   end
 
-  def main(attribute)
-    label = attribute.camelcase
-    @browser.element(:xpath,"//div[@class='detail-main ng-scope]/*[*[text()='#{label}']]/*[2]")
+  def name_main
+    @browser.element(:xpath,"//div[@class='detail-main ng-scope']/*/*[2]")
+  end
+
+  def name_hidden_main
+    @browser.element(:xpath,"//div[@class='detail-main ng-scope']/*/*[4]")
+  end
+
+  def email_main
+    @browser.element(:xpath,"//div[@class='detail-main ng-scope']/*/*[6]")
   end
 
   def address(type)
