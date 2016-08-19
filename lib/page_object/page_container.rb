@@ -16,7 +16,7 @@ class PageContainer
   def close
     @browser.close 
   end
-  
+
   def wait_status(element,status)
     i = 1
     count = 30

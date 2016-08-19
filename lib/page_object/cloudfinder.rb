@@ -16,6 +16,14 @@ class Cloudfinder < Homepage
     @browser.text_field(placeholder:'Search here...')
   end
 
+  def advanced_search
+    @browser.button(text:/Advanced Search/)
+  end
+
+  def date
+    @browser.div(class:'side-list drop').li(class:'left-border col-xs-5 form-inline').div(class:'input-group').text_field
+  end
+
   def contact(name)
     @browser.td(:xpath,"//div[@class='scrollme-list ng-scope']//table//tr[td[3]/strong='#{name}']/td[3]")
   end
@@ -55,6 +63,10 @@ class Cloudfinder < Homepage
 
   def relevance(name)
     @browser.link(text:name)
+  end
+
+  def contact_header(index)
+    @browser.element(:xpath,"//div[@class='detail-main ng-scope']/*/*[#{index}]")
   end
 
   def name_main
