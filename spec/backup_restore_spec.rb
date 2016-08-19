@@ -1,4 +1,4 @@
-describe "Test", :broken => false do
+describe "Backup and Restore", :broken => false do
 
   full_path = File.dirname(File.dirname(__FILE__)) + '/lib/data/contact.yaml'
   contacts = YAML::load(File.open(full_path)) #contains all data needed for assertions
