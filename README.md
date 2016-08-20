@@ -12,6 +12,10 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 ```
 rvm install 2.1.3
 ```
+If another version of ruby already exists on RVM, do following to switch to newly installed ruby:
+```
+rvm --default use 2.1.3
+```
 3\. Clone the repository
 
 4\. Install gems from Gemfile
