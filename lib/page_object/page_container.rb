@@ -1,4 +1,9 @@
 class PageContainer
+  
+  def initialize(browser)
+    #$config = load_config() #loads yml config file, see init_rspec for details
+    @browser = browser
+  end
 
   def close
     @browser.close 

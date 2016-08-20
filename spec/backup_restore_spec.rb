@@ -5,7 +5,7 @@ describe "Backup and Restore", :broken => false do
   restore_list = []
 
   date = true #true if date is set in advanced search
-  manual_backup = true #true if user wants to trigger backup
+  manual_backup = false #true if user wants to trigger backup
   manual_backup_sleep = 100 #custom sleep for backup to be triggered
   manual_contact = "contact2" #defines which contact data corresponds to manual backup
 
