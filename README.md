@@ -27,7 +27,7 @@ bundle install
 ```
 5\. Ensure Firefox web browser is installed on machine where the test script is going to be run
 
-Note: Test script might not be running properly due to incompatibility between selenium-webdriver and Firefox browser version. Based on https://github.com/SeleniumHQ/selenium/blob/master/dotnet/CHANGELOG, selenium-webdriver 2.51.0 is tested with Firefox 38, 43 and 44. Currently installed selenium-webdriver version is 2.53.4.
+Note: Test script might not be running properly on latest Firefox browser versions due to incompatibility between selenium-webdriver and Firefox browser version. Based on https://github.com/SeleniumHQ/selenium/blob/master/dotnet/CHANGELOG, selenium-webdriver 2.51.0 is tested with Firefox 38, 43 and 44. Currently installed selenium-webdriver version is 2.53.4.
 
 6\. Run the test script
 ```
